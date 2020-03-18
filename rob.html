@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="rob.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        Name<input v-model="name"> course:
+        <input v-model="course"> Duration of study:<input v-model="acceptancePeriod">
+        <br>
+        <button v-on:click="addStudent">Add the student you entered</button>
+
+        <ul>
+            <li v-for="student in students" v-bind:key="student.id">
+                ID {{student.id}} / Name {{student.name}} / Course {{student.course}} / Duration of study {{student.acceptancePeriod}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="rob.js"></script>
+</body>
+
+</html>
